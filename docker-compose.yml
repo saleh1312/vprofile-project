@@ -1,7 +1,7 @@
 version: "3"
 services:
   db01:
-    image: db01
+    image: saleh1312\db01
     container_name: db01
     hostname: db01
     environment:
@@ -28,7 +28,7 @@ services:
       - app_network
 
   app01:
-    image: app01
+    image: saleh1312\db01
     container_name: app01
     hostname: app01
     networks:

@@ -1,0 +1,1 @@
+kubeadm join 10.0.0.10:6443 --token 2vhqde.1avrh3edkdtj0lkq --discovery-token-ca-cert-hash sha256:6904006f9807e3b9b1ece58f4d79e4345e95890c9f6bd615740fe05572d98923  --cri-socket=unix:///var/run/cri-dockerd.sock
