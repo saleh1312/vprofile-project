@@ -30,3 +30,5 @@ kubectl apply -f .
 kubectl get all
 kubectl get nodes -owide
 kubectl get svc
+
+HAPPY !
