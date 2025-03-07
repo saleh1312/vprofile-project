@@ -1,25 +1,15 @@
-# Prerequisites
-#######
-- JDK 11 
-- Maven 3 
-- MySQL 8
+1. build the app
 
-# Technologies 
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Maven
-- JSP
-- Tomcat
-- MySQL
-- Memcached
-- Rabbitmq
-- ElasticSearch
-# Database
-Here,we used Mysql DB 
-sql dump file:
-- /src/main/resources/db_backup.sql
-- db_backup.sql file is a mysql dump file.we have to import this dump to mysql db server
-- > mysql -u <user_name> -p accounts < db_backup.sql
+docker run -it --name my_maven -v .:/usr/src/mymaven -w /usr/src/mymaven maven mvn clean install
 
+2. build db01
+docker build -t saleh1312/db01:v1.0 -f docker_files\Dockerfile.db01 .
 
+3. build app01
+docker build -t saleh1312/app01:v1.0 -f docker_files\Dockerfile.app01 .
+
+3. build web01
+docker build -t saleh1312/web01:v1.0 -f docker_files\Dockerfile.web01 .
+
+3. build web01
+docker build -t saleh1312/web01:v1.0 -f docker_files\Dockerfile.web01 .
