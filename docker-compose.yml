@@ -42,7 +42,7 @@ services:
       context: .
       dockerfile: docker_files/Dockerfile.web01
     container_name: web01
-    hostname: app01
+    hostname: web01
     ports:
       - "80:80"
 
