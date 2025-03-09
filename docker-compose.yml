@@ -12,14 +12,14 @@ services:
       - app_network
 
   mc01:
-    image: memcached
+    image: memcached:latest
     container_name: mc01
     hostname: mc01
     networks:
       - app_network
 
   rmq01:
-    image: rabbitmq
+    image: rabbitmq:latest
     container_name: rmq01
     hostname: rmq01
     environment:
@@ -45,6 +45,8 @@ services:
     hostname: web01
     ports:
       - "80:80"
+    networks:
+      - app_network
 
 networks:
   app_network:
