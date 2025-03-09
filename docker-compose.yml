@@ -1,7 +1,8 @@
-version: "3"
 services:
   db01:
-    image: saleh1312\db01
+    build:
+      context: .
+      dockerfile: docker_files/Dockerfile.db01
     container_name: db01
     hostname: db01
     environment:
@@ -28,14 +29,18 @@ services:
       - app_network
 
   app01:
-    image: saleh1312\db01
+    build:
+      context: .
+      dockerfile: docker_files/Dockerfile.app01
     container_name: app01
     hostname: app01
     networks:
       - app_network
 
-  vproweb:
-    image: web01
+  web01:
+    build:
+      context: .
+      dockerfile: docker_files/Dockerfile.web01
     container_name: web01
     hostname: app01
     ports:
